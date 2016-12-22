@@ -7,7 +7,7 @@ public class MyFFT {
 	private float[] sin;
 	private float[] somFFT;
 	private float[] Som;
-	private float fs =  44100;
+	private float fs =44100;
 	private float[] f;
 	private float[] respfreq;
 	private float[] respFreq;
