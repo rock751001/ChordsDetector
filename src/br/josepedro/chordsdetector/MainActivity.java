@@ -311,13 +311,12 @@ public class MainActivity extends Activity {
 				}
 
 				// Setando valores na tela
-				int numAcorde = myfft.getAcorde();
-				chordTV.setText(nomeAcordes[numAcorde]);
-				textGradient = new LinearGradient(0, 0, 0, 250,
-						new int[] { coresNotas[(int) (numAcorde / 4)],
-								Color.rgb(153, 47, 47) }, new float[] { 0, 1 },
-						TileMode.CLAMP);
-				chordTV.getPaint().setShader(textGradient);
+				int numAcorde = myfft.getAcorde(); //得到和弦
+				chordTV.setText(nomeAcordes[numAcorde]);//顯示得到的和弦
+				textGradient = new LinearGradient(0, 0, 0, 250, //LinearGradient线性渲染(float x0, float y0, float x1, float y1,int[] colors, float[] positions,Shader.TileMode tile) http://www.cnblogs.com/itchq/p/4138966.html
+						new int[] { coresNotas[(int) (numAcorde / 4)], Color.rgb(153, 47, 47) }, new float[] { 0, 1 },
+						TileMode.CLAMP); //tileMode定义背景的显示模式，CLAMP的作用是如果渲染器超出原始边界范围，则会复制边缘颜色对超出范围的区域进行着色。
+				chordTV.getPaint().setShader(textGradient);//顯示顏色
 			}
  			
 
